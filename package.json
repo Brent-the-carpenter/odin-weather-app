@@ -1,7 +1,7 @@
 {
-  "name": "project-template",
+  "name": "odin-weather-app",
   "version": "1.0.0",
-  "description": "template file for setting up future projects using webpack",
+  "description": "this is my odin weather app",
   "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

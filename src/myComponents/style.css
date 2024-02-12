@@ -1,0 +1,197 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background: url("./imgs/forestImage.jpeg");
+  background-size: 100% 100%;
+  overflow-y: hidden;
+}
+body {
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 2rem 2rem 2rem 1fr 1fr 1fr;
+}
+body:nth-child(2) {
+  row-gap: 20px;
+}
+.date {
+  display: flex;
+  grid-row: 1/2;
+  grid-column: 1/3;
+  padding: 8px;
+  justify-self: end;
+  color: grey;
+  /* background: rgba(230, 228, 228, 0.8); */
+  justify-content: center;
+  align-items: center;
+  -webkit-text-stroke: 1px #000000;
+  text-shadow: 0px 1px 4px #23430c;
+}
+
+.locationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 3em;
+  grid-column: 1/3;
+  grid-row: 3/4;
+  gap: 10px;
+  color: white;
+  -webkit-text-stroke: 1px #f8f8f8;
+  text-shadow: 0px 1px 4px #23430c;
+}
+input {
+  grid-row: 2/3;
+  grid-column: 1/3;
+  align-self: center;
+  justify-self: center;
+  width: 300px;
+  height: 30px;
+  background-image: url(./imgs/magnify.svg);
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  border: rgba(230, 228, 228, 1);
+  border-radius: 12px;
+  background-color: rgba(37, 37, 37, 0.2);
+  color: white;
+  text-align: center;
+}
+.currentWeather {
+  justify-self: center;
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3rem 3rem 3rem 3rem;
+  justify-content: center;
+  grid-row: 4/5;
+  grid-column: 1/3;
+  /* background-color: rgba(37, 37, 37, 0.1); */
+  width: 110%;
+}
+#currentTemp {
+  font-size: 2rem;
+  color: white;
+  grid-row: 2/3;
+  grid-column: 1/3;
+  justify-self: center;
+  color: white;
+
+  -webkit-text-stroke: 1px #f8f8f8;
+  text-shadow: 0px 1px 4px #23430c;
+  /* width: 100px; */
+}
+.condition {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  color: white;
+  font-size: 2rem;
+  justify-self: end;
+  align-self: center;
+  -webkit-text-stroke: 1px #f8f8f8;
+  text-shadow: 0px 1px 4px #23430c;
+}
+.conditionIcon {
+  grid-row: 1/2;
+  grid-template-columns: 2/3;
+  justify-self: baseline;
+  align-self: center;
+}
+#highToday {
+  font-size: 2rem;
+  color: white;
+  grid-row: 3/4;
+  grid-column: 2/3;
+  /* width: 100px; */
+  justify-self: center;
+  -webkit-text-stroke: 1px #f8f8f8;
+  text-shadow: 0px 1px 4px #23430c;
+}
+#lowToday {
+  color: white;
+  font-size: 2rem;
+
+  grid-row: 3/4;
+  grid-column: 1/2;
+  /* width: 100px; */
+  justify-self: center;
+  -webkit-text-stroke: 1px #f8f8f8;
+  text-shadow: 0px 1px 4px #23430c;
+}
+.humidity {
+  grid-row: 4/5;
+  grid-column: 1/2;
+  color: white;
+  font-size: 2rem;
+  justify-self: center;
+  -webkit-text-stroke: 1px #f8f8f8;
+  text-shadow: 0px 1px 4px #23430c;
+}
+.uv {
+  grid-row: 4/5;
+  grid-column: 2/3;
+  color: white;
+  font-size: 2rem;
+  justify-self: center;
+  -webkit-text-stroke: 1px #f8f8f8;
+  text-shadow: 0px 1px 4px #23430c;
+}
+.hourlyForecastContainer {
+  font-size: 2rem;
+  color: white;
+  width: 600px;
+  -webkit-text-stroke: 1px #f8f8f8;
+  text-shadow: 0px 1px 4px #23430c;
+  text-align: center;
+  justify-self: center;
+  grid-column: 1/3;
+}
+.hourlyForecast {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  font-size: 16px;
+  width: 600px;
+  height: 150px;
+  grid-row: 5/6;
+  grid-column: 1/3;
+  overflow: auto;
+  scrollbar-color: rgba(37, 37, 37, 0.2);
+  background-color: rgba(37, 37, 37, 0.2);
+  color: white;
+  gap: 30px;
+  text-align: center;
+}
+.hourlyForecast::-webkit-scrollbar {
+  display: none;
+}
+.hourlyForecast div {
+  width: 80px;
+}
+.threeDayForecastContainer {
+  font-size: 2rem;
+  color: white;
+  -webkit-text-stroke: 1px #f8f8f8;
+  text-shadow: 0px 1px 4px #23430c;
+  text-align: center;
+  justify-self: center;
+  grid-column: 1/3;
+}
+.threeDayForecastContainer {
+  grid-row: 6/7;
+  grid-template-columns: 1/3;
+}
+.threeDayForecast {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
