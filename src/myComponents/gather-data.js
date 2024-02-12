@@ -16,7 +16,7 @@ function filterThreeDaysdata(object) {
 async function callWeatherApi(location) {
   try {
     const threeDaysCallResults = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=be860411547b4bc8ad6191258240702&q=${location}&days=3&aqi=no&alerts=no`,
+      `https://api.weatherapi.com/v1/forecast.json?key=be860411547b4bc8ad6191258240702&q=${location}&days=3&aqi=no&alerts=no`,
       { mode: "cors" }
     );
     const threeDaysResults = await threeDaysCallResults.json();
